@@ -4,7 +4,7 @@ from typing import Any, Optional, Type
 
 from marshmallow import Schema, fields, post_load, validate
 
-from notifications_client.notifications import (
+from neuro_notifications_client.notifications import (
     CreditsWillRunOutSoon,
     JobCannotStartLackResources,
     JobCannotStartNoCredits,

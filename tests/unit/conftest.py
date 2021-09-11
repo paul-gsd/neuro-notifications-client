@@ -7,8 +7,8 @@ from aiohttp.abc import Application
 from aiohttp.hdrs import AUTHORIZATION
 from aiohttp.test_utils import TestServer as AioHTTPTestServer
 
-from notifications_client import Client
-from notifications_client.notifications import Notification
+from neuro_notifications_client import Client
+from neuro_notifications_client.notifications import Notification
 
 
 @pytest.fixture

@@ -7,7 +7,7 @@ from aiohttp.client import _RequestContextManager  # eventually will be public
 from aiohttp.hdrs import AUTHORIZATION, USER_AGENT
 from yarl import URL
 
-from notifications_client.schema import SLUG_TO_SCHEMA
+from neuro_notifications_client.schema import SLUG_TO_SCHEMA
 
 from .notifications import Notification
 from .version import VERSION

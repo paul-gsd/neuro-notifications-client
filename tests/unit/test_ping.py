@@ -3,7 +3,7 @@ from asyncio import TimeoutError
 import pytest
 from aiohttp.client_exceptions import ClientResponseError
 
-from notifications_client import Client
+from neuro_notifications_client import Client
 
 
 async def test_ping(client: Client) -> None:

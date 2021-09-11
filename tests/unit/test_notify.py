@@ -2,14 +2,14 @@ from datetime import datetime
 
 import pytest
 
-from notifications_client import (
+from neuro_notifications_client import (
     Client,
     JobCannotStartLackResources,
     JobCannotStartQuotaReached,
     JobTransition,
     QuotaWillBeReachedSoon,
 )
-from notifications_client.notifications import JobNotification, QuotaResourceType
+from neuro_notifications_client.notifications import JobNotification, QuotaResourceType
 
 
 # TODO: make this tests more meaningful:

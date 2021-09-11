@@ -22,4 +22,4 @@ lint: format
 	mypy $(MYPY_TARGETS)
 
 test_unit:
-	pytest --cov=notifications_client --cov-report xml:.coverage.xml tests/unit
+	pytest --cov=neuro_notifications_client --cov-report xml:.coverage.xml tests/unit
