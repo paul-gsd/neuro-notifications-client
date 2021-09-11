@@ -29,6 +29,8 @@ class Client:
         self._client: Optional[aiohttp.ClientSession] = None
 
     async def init(self) -> None:
+        if not self._url:
+            return
         if self._client is None:  # pragma: no branch
             self._client = aiohttp.ClientSession(
                 raise_for_status=True,
@@ -70,12 +72,16 @@ class Client:
         return self._client.request(method, url, *args, **kwargs)  # type: ignore
 
     async def ping(self, timeout_seconds: float = 10) -> None:
+        if not self._url:
+            return
         timeout = aiohttp.ClientTimeout(total=timeout_seconds)
         async with self._request("GET", "/api/v1/ping", timeout=timeout) as resp:
             txt = await resp.text()
             assert txt == "Pong"
 
     async def secured_ping(self, timeout_seconds: float = 10) -> None:
+        if not self._url:
+            return
         timeout = aiohttp.ClientTimeout(total=timeout_seconds)
         async with self._request(
             "GET", "/api/v1/secured-ping", timeout=timeout
@@ -84,6 +90,8 @@ class Client:
             assert txt == "Pong"
 
     async def notify(self, notification: Notification) -> None:
+        if not self._url:
+            return
         slug = notification.slug()
         schema_cls = SLUG_TO_SCHEMA.get(slug)
         if schema_cls is None:
