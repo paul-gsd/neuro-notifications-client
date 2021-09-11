@@ -10,9 +10,9 @@ install_requires = (
 )
 
 setup(
-    name="notifications-client",
+    name="neuro-notifications-client",
     python_requires=">=3.8",
-    url="https://github.com/neuromation/platform-notifications",
+    url="https://github.com/neuro-inc/neuro-notifications-client",
     packages=find_packages(),
     install_requires=install_requires,
     zip_safe=False,
