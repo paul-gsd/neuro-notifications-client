@@ -12,15 +12,6 @@ from neuro_notifications_client.notifications import Notification
 
 
 @pytest.fixture
-def event_loop(loop: asyncio.AbstractEventLoop) -> asyncio.AbstractEventLoop:
-    """
-    This fixture mitigates the compatibility issues between
-    pytest-asyncio and pytest-aiohttp.
-    """
-    return loop
-
-
-@pytest.fixture
 async def api_server(
     aiohttp_server: Callable[[Application], Awaitable[AioHTTPTestServer]], token: str
 ) -> AsyncIterator[AioHTTPTestServer]:
