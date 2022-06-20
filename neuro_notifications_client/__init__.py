@@ -7,6 +7,7 @@ from .notifications import (
     JobTransition,
     QuotaResourceType,
     QuotaWillBeReachedSoon,
+    Welcome,
 )
 
 __all__ = [
@@ -18,4 +19,5 @@ __all__ = [
     "QuotaWillBeReachedSoon",
     "QuotaResourceType",
     "CreditsWillRunOutSoon",
+    "Welcome",
 ]
