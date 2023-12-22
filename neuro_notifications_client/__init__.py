@@ -1,5 +1,6 @@
 from .client import Client
 from .notifications import (
+    AlertManagerNotification,
     CreditsWillRunOutSoon,
     JobCannotStartLackResources,
     JobCannotStartNoCredits,
@@ -20,4 +21,5 @@ __all__ = [
     "QuotaResourceType",
     "CreditsWillRunOutSoon",
     "Welcome",
+    "AlertManagerNotification",
 ]
